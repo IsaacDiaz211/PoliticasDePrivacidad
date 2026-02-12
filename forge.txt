@@ -1,0 +1,32 @@
+Política de Privacidad - Forge
+Última actualización: 12 de febrero de 2026
+
+En Forge, valoramos tu privacidad por encima de todo. Esta política explica cómo manejamos la información (o mejor dicho, cómo no lo hacemos) y por qué solicitamos ciertos permisos en tu dispositivo.
+
+1. Recolección de Información
+[Nombre de tu App] es una aplicación diseñada bajo el principio de "Privacidad por Defecto".
+
+No recolectamos: No solicitamos, almacenamos ni procesamos ningún tipo de dato personal (como nombres, correos electrónicos, direcciones IP o ubicación).
+
+No rastreamos: La aplicación no utiliza cookies ni herramientas de análisis de terceros para rastrear tu comportamiento.
+
+2. Uso de Permisos: Notificaciones
+El único permiso que solicita la aplicación es el de Notificaciones.
+
+Propósito: Este permiso se utiliza exclusivamente para que el temporizador pueda alertarte cuando el tiempo haya transcurrido.
+
+Control del usuario: Puedes activar o desactivar este permiso en cualquier momento desde los ajustes de tu sistema operativo. Sin este permiso, la aplicación funcionará, pero no podrá avisarte una vez que salgas de la pantalla principal o bloquees el dispositivo.
+
+3. Almacenamiento de Datos
+Cualquier configuración que realices dentro de la aplicación (como tiempos predefinidos o preferencias de sonido) se almacena de forma local en tu dispositivo. No tenemos servidores centrales donde se guarde esta información.
+
+4. Servicios de Terceros
+Nuestra aplicación no integra servicios de terceros, redes publicitarias ni SDKs de recolección de datos que puedan comprometer tu anonimato.
+
+5. Cambios en esta Política
+Es posible que actualicemos esta política en el futuro si añadimos nuevas funcionalidades. Sin embargo, nuestro compromiso de no recolectar datos personales se mantendrá como pilar fundamental del desarrollo.
+
+6. Contacto
+Si tienes alguna duda sobre esta política o el funcionamiento de la app, puedes contactarnos en:
+
+isaac211.md@proton.me
