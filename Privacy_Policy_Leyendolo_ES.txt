@@ -1,0 +1,58 @@
+Politica de Privacidad
+Leyendolo
+Ultima actualizacion: 16 de marzo de 2026
+
+1. Introduccion
+Esta Politica de Privacidad explica como Leyendolo maneja los datos.
+
+Leyendolo es operada por un desarrollador independiente: Isaac Diaz.
+La app esta disenada con un enfoque de datos minimos y no recopila ni almacena datos personales de usuarios finales.
+
+2. Datos que recopilamos
+No recopilamos ni almacenamos datos personales de usuarios finales.
+
+En particular, Leyendolo no usa cuentas de usuario, no mantiene perfiles de usuario y no conserva una base de datos de usuarios.
+No retenemos el contenido que los usuarios envian en prompts, entradas de texto o material cargado.
+
+3. Metadatos tecnicos limitados
+Para la operacion del servicio y el control de costos, el backend almacena metadatos limitados de solicitudes a OpenRouter:
+
+- fecha y hora de la solicitud
+- modelo utilizado
+- uso de tokens
+
+Estos metadatos no incluyen contenido del usuario y no se usan para identificar a usuarios individuales.
+
+4. Logs de infraestructura y retencion
+El backend corre en Vercel Hobby.
+Los logs de la plataforma son transitorios y estan disponibles solo durante una ventana tecnica limitada (hasta aproximadamente 30 minutos).
+No guardamos copias separadas de esos logs ni los usamos para identificar usuarios.
+
+5. Como usamos los metadatos tecnicos
+Los metadatos limitados descritos arriba se usan solo para:
+
+- mantener el servicio en funcionamiento
+- monitorear uso y costos
+- diagnosticar problemas operativos
+
+6. Comparticion y terceros
+No vendemos datos personales.
+
+Para prestar el servicio, dependemos de proveedores terceros como Vercel (hosting) y OpenRouter (pasarela de IA).
+Solo se procesa el minimo de datos tecnicos necesarios para brindar el servicio, de acuerdo con los terminos y politicas de privacidad de esos proveedores.
+
+7. Procesamiento internacional
+La infraestructura del servicio puede procesar datos tecnicos en paises distintos del tuyo, incluidos los Estados Unidos.
+
+8. Tus derechos
+Dependiendo de tu jurisdiccion, puedes tener derechos de privacidad.
+Puedes contactarnos en isaac211.md@proton.md para enviar una solicitud.
+
+Como Leyendolo no mantiene cuentas de usuario ni registros identificables de usuarios, en muchos casos no podremos vincular solicitudes con una persona especifica.
+
+9. Privacidad de menores
+Leyendolo no esta dirigida a menores de 13 anos.
+
+10. Cambios en esta Politica de Privacidad
+Podemos actualizar esta Politica de Privacidad ocasionalmente.
+Cuando lo hagamos, publicaremos la version actualizada en la app y modificaremos la fecha de "Ultima actualizacion".

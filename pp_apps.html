@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politica de Privacidad - Forge</title>
+  <title>Politicas de Privacidad - Forge y Leyendolo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
@@ -77,7 +77,7 @@
     }
 
     .hero p {
-      max-width: 740px;
+      max-width: 760px;
       margin: 0 auto;
       color: var(--muted);
       font-size: 1rem;
@@ -109,13 +109,27 @@
     }
 
     .menu-item {
+      display: inline-flex;
+      align-items: center;
       border-radius: var(--radius-pill);
       padding: 10px 18px;
       font-size: 0.95rem;
       font-weight: 800;
+      text-decoration: none;
       background: linear-gradient(120deg, var(--accent), var(--accent-strong));
       color: #ffffff;
       box-shadow: 0 10px 24px rgba(10, 114, 110, 0.32);
+      transition: transform 140ms ease, box-shadow 140ms ease;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 26px rgba(10, 114, 110, 0.38);
+    }
+
+    .menu-item:focus-visible {
+      outline: 2px solid rgba(10, 114, 110, 0.5);
+      outline-offset: 2px;
     }
 
     .menu-note {
@@ -130,6 +144,11 @@
       cursor: default;
     }
 
+    .policies {
+      display: grid;
+      gap: 22px;
+    }
+
     .policy-frame {
       border-radius: var(--radius-xl);
       background: var(--panel);
@@ -138,6 +157,10 @@
       padding: clamp(18px, 2.6vw, 32px);
       backdrop-filter: blur(10px);
       animation: fadeUp 360ms ease;
+    }
+
+    .app-section {
+      scroll-margin-top: 96px;
     }
 
     .panel-head {
@@ -163,6 +186,14 @@
       max-width: 680px;
     }
 
+    .panel-actions {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .updated {
       background: var(--accent-soft);
       color: var(--accent-strong);
@@ -172,6 +203,52 @@
       font-size: 0.82rem;
       letter-spacing: 0.02em;
       white-space: nowrap;
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      gap: 6px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      padding: 5px;
+    }
+
+    .lang-btn {
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      background: transparent;
+      cursor: pointer;
+      transition: background 120ms ease, color 120ms ease;
+    }
+
+    .lang-btn.is-active {
+      color: #ffffff;
+      background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 8px 16px rgba(10, 114, 110, 0.24);
+    }
+
+    .lang-btn:focus-visible {
+      outline: 2px solid rgba(10, 114, 110, 0.45);
+      outline-offset: 2px;
+    }
+
+    .lang-block {
+      display: none;
+    }
+
+    .lang-block.is-active {
+      display: block;
+      animation: fadeUp 280ms ease;
+    }
+
+    .is-hidden {
+      display: none;
     }
 
     .card-grid {
@@ -242,6 +319,14 @@
         flex-wrap: wrap;
         justify-content: center;
       }
+
+      .panel-actions {
+        justify-content: flex-start;
+      }
+
+      .updated {
+        white-space: normal;
+      }
     }
 
     @keyframes fadeUp {
@@ -259,89 +344,345 @@
 <body>
   <div class="layout">
     <header class="hero">
-      <span class="hero-badge">Forge Privacy Hub</span>
-      <h1>Pol&iacute;tica de Privacidad</h1>
+      <span class="hero-badge">Apps Privacy Hub</span>
+      <h1>Pol&iacute;ticas de Privacidad</h1>
       <p>
-        Como desarrollador independiente, valoro tu privacidad por encima de todo. Esta página explica c&oacute;mo se maneja
-        la informaci&oacute;n y por qu&eacute; solicitamos ciertos permisos en tu dispositivo.
+        Como desarrollador independiente, valoro tu privacidad por encima de todo. Esta p&aacute;gina centraliza
+        las pol&iacute;ticas de Forge y Ley&eacute;ndolo, con acceso a la versi&oacute;n en espa&ntilde;ol e ingl&eacute;s para esta &uacute;ltima.
       </p>
     </header>
 
     <nav class="top-menu" aria-label="Menu superior de apps">
       <div class="menu-items">
-        <span class="menu-item" aria-current="page">Forge</span>
-        <span class="menu-note">Pr&oacute;ximamente m&aacute;s apps</span>
+        <a class="menu-item" href="#forge">Forge</a>
+        <a class="menu-item" href="#leyendolo">Ley&eacute;ndolo</a>
+        <span class="menu-note">2 apps disponibles</span>
       </div>
     </nav>
 
-    <main class="policy-frame">
-      <div class="panel-head">
-        <div>
-          <h2>Pol&iacute;tica de Privacidad - Forge</h2>
-          <p>
-            Forge est&aacute; dise&ntilde;ada bajo el principio de privacidad por defecto. No recolectamos datos
-            personales y priorizamos el control del usuario en todo momento.
-          </p>
+    <main class="policies" aria-label="Politicas de privacidad de aplicaciones">
+      <section class="policy-frame app-section" id="forge">
+        <div class="panel-head">
+          <div>
+            <h2>Pol&iacute;tica de Privacidad - Forge</h2>
+            <p>
+              Forge est&aacute; dise&ntilde;ada bajo el principio de privacidad por defecto. No recolectamos datos
+              personales y priorizamos el control del usuario en todo momento.
+            </p>
+          </div>
+          <span class="updated">&Uacute;ltima actualizaci&oacute;n: 12 de febrero de 2026</span>
         </div>
-        <span class="updated">&Uacute;ltima actualizaci&oacute;n: 12 de febrero de 2026</span>
-      </div>
 
-      <div class="card-grid">
-        <article class="policy-card wide">
-          <h3>1) Recolecci&oacute;n de Informaci&oacute;n</h3>
-          <p>Forge es una aplicaci&oacute;n dise&ntilde;ada bajo el principio de "Privacidad por Defecto".</p>
-          <ul>
-            <li>No recolectamos: no solicitamos, almacenamos ni procesamos datos personales como nombres, correos electr&oacute;nicos, direcciones IP o ubicaci&oacute;n.</li>
-            <li>No rastreamos: la aplicaci&oacute;n no utiliza cookies ni herramientas de an&aacute;lisis de terceros para rastrear tu comportamiento.</li>
-          </ul>
-        </article>
+        <div class="card-grid">
+          <article class="policy-card wide">
+            <h3>1) Recolecci&oacute;n de Informaci&oacute;n</h3>
+            <p>Forge es una aplicaci&oacute;n dise&ntilde;ada bajo el principio de "Privacidad por Defecto".</p>
+            <ul>
+              <li>No recolectamos: no solicitamos, almacenamos ni procesamos datos personales como nombres, correos electr&oacute;nicos, direcciones IP o ubicaci&oacute;n.</li>
+              <li>No rastreamos: la aplicaci&oacute;n no utiliza cookies ni herramientas de an&aacute;lisis de terceros para rastrear tu comportamiento.</li>
+            </ul>
+          </article>
 
-        <article class="policy-card">
-          <h3>2) Uso de Permisos: Notificaciones</h3>
-          <p>El &uacute;nico permiso que solicita la aplicaci&oacute;n es el de notificaciones.</p>
-          <ul>
-            <li>Prop&oacute;sito: alertarte cuando el temporizador haya terminado.</li>
-            <li>Control del usuario: puedes activar o desactivar este permiso en cualquier momento desde ajustes del sistema operativo.</li>
-          </ul>
-        </article>
+          <article class="policy-card">
+            <h3>2) Uso de Permisos: Notificaciones</h3>
+            <p>El &uacute;nico permiso que solicita la aplicaci&oacute;n es el de notificaciones.</p>
+            <ul>
+              <li>Prop&oacute;sito: alertarte cuando el temporizador haya terminado.</li>
+              <li>Control del usuario: puedes activar o desactivar este permiso en cualquier momento desde ajustes del sistema operativo.</li>
+            </ul>
+          </article>
 
-        <article class="policy-card">
-          <h3>3) Almacenamiento de Datos</h3>
-          <p>
-            Cualquier configuraci&oacute;n que realices en la app, como tiempos predefinidos o preferencias
-            de sonido, se almacena de forma local en tu dispositivo. No usamos servidores centrales
-            para guardar esta informaci&oacute;n.
-          </p>
-        </article>
+          <article class="policy-card">
+            <h3>3) Almacenamiento de Datos</h3>
+            <p>
+              Cualquier configuraci&oacute;n que realices en la app, como tiempos predefinidos o preferencias
+              de sonido, se almacena de forma local en tu dispositivo. No usamos servidores centrales
+              para guardar esta informaci&oacute;n.
+            </p>
+          </article>
 
-        <article class="policy-card">
-          <h3>4) Servicios de Terceros</h3>
-          <p>
-            Nuestra aplicaci&oacute;n no integra servicios de terceros, redes publicitarias ni SDKs de
-            recolecci&oacute;n de datos que puedan comprometer tu anonimato.
-          </p>
-        </article>
+          <article class="policy-card">
+            <h3>4) Servicios de Terceros</h3>
+            <p>
+              Nuestra aplicaci&oacute;n no integra servicios de terceros, redes publicitarias ni SDKs de
+              recolecci&oacute;n de datos que puedan comprometer tu anonimato.
+            </p>
+          </article>
 
-        <article class="policy-card">
-          <h3>5) Cambios en esta Pol&iacute;tica</h3>
-          <p>
-            Es posible que actualicemos esta pol&iacute;tica en el futuro si se a&ntilde;aden nuevas
-            funcionalidades. El compromiso de no recolectar datos personales se mantiene como pilar
-            del desarrollo de Forge.
-          </p>
-        </article>
+          <article class="policy-card">
+            <h3>5) Cambios en esta Pol&iacute;tica</h3>
+            <p>
+              Es posible que actualicemos esta pol&iacute;tica en el futuro si se a&ntilde;aden nuevas
+              funcionalidades. El compromiso de no recolectar datos personales se mantiene como pilar
+              del desarrollo de Forge.
+            </p>
+          </article>
 
-        <article class="policy-card wide">
-          <h3>6) Contacto</h3>
-          <p>
-            Si tienes dudas sobre esta pol&iacute;tica o el funcionamiento de la app, puedes escribir a
-            <a href="mailto:isaac211.md@proton.me">isaac211.md@proton.me</a>.
-          </p>
-        </article>
-      </div>
+          <article class="policy-card wide">
+            <h3>6) Contacto</h3>
+            <p>
+              Si tienes dudas sobre esta pol&iacute;tica o el funcionamiento de la app, puedes escribir a
+              <a href="mailto:isaac211.md@proton.me">isaac211.md@proton.me</a>.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="policy-frame app-section" id="leyendolo">
+        <div class="panel-head">
+          <div>
+            <h2>Pol&iacute;tica de Privacidad - Ley&eacute;ndolo</h2>
+            <p>
+              Ley&eacute;ndolo aplica un enfoque de datos m&iacute;nimos. Esta secci&oacute;n mantiene el mismo contenido en
+              espa&ntilde;ol e ingl&eacute;s para que puedas consultar la versi&oacute;n que prefieras.
+            </p>
+          </div>
+          <div class="panel-actions">
+            <span class="updated" id="leyendolo-updated-es">&Uacute;ltima actualizaci&oacute;n: 16 de marzo de 2026</span>
+            <span class="updated is-hidden" id="leyendolo-updated-en">Last Updated: March 16, 2026</span>
+            <div class="lang-toggle" role="group" aria-label="Selector de idioma de la politica de Leyendolo">
+              <button type="button" class="lang-btn is-active" data-lang-btn="es" aria-pressed="true">ES</button>
+              <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+            </div>
+          </div>
+        </div>
+
+        <section class="lang-block is-active" data-lang-content="es" lang="es" aria-label="Politica de privacidad de Leyendolo en espanol">
+          <div class="card-grid">
+            <article class="policy-card wide">
+              <h3>1) Introducci&oacute;n</h3>
+              <p>
+                Esta Pol&iacute;tica de Privacidad explica c&oacute;mo Ley&eacute;ndolo maneja los datos.
+                Ley&eacute;ndolo es operada por un desarrollador independiente: Isaac Diaz.
+                La app est&aacute; dise&ntilde;ada con un enfoque de datos m&iacute;nimos y no recopila ni almacena datos personales de usuarios finales.
+              </p>
+            </article>
+
+            <article class="policy-card">
+              <h3>2) Datos que recopilamos</h3>
+              <p>No recopilamos ni almacenamos datos personales de usuarios finales.</p>
+              <ul>
+                <li>Ley&eacute;ndolo no usa cuentas de usuario, no mantiene perfiles de usuario y no conserva una base de datos de usuarios.</li>
+                <li>No retenemos el contenido que los usuarios env&iacute;an en prompts, entradas de texto o material cargado.</li>
+              </ul>
+            </article>
+
+            <article class="policy-card">
+              <h3>3) Metadatos t&eacute;cnicos limitados</h3>
+              <p>Para la operaci&oacute;n del servicio y el control de costos, el backend almacena metadatos limitados de solicitudes a OpenRouter:</p>
+              <ul>
+                <li>fecha y hora de la solicitud</li>
+                <li>modelo utilizado</li>
+                <li>uso de tokens</li>
+              </ul>
+              <p>Estos metadatos no incluyen contenido del usuario y no se usan para identificar a usuarios individuales.</p>
+            </article>
+
+            <article class="policy-card">
+              <h3>4) Logs de infraestructura y retenci&oacute;n</h3>
+              <p>
+                El backend corre en Vercel Hobby. Los logs de la plataforma son transitorios y est&aacute;n disponibles
+                solo durante una ventana t&eacute;cnica limitada (hasta aproximadamente 30 minutos).
+                No guardamos copias separadas de esos logs ni los usamos para identificar usuarios.
+              </p>
+            </article>
+
+            <article class="policy-card">
+              <h3>5) C&oacute;mo usamos los metadatos t&eacute;cnicos</h3>
+              <p>Los metadatos limitados descritos arriba se usan solo para:</p>
+              <ul>
+                <li>mantener el servicio en funcionamiento</li>
+                <li>monitorear uso y costos</li>
+                <li>diagnosticar problemas operativos</li>
+              </ul>
+            </article>
+
+            <article class="policy-card wide">
+              <h3>6) Compartici&oacute;n y terceros</h3>
+              <p>
+                No vendemos datos personales.
+                Para prestar el servicio, dependemos de proveedores terceros como Vercel (hosting) y OpenRouter (pasarela de IA).
+                Solo se procesa el m&iacute;nimo de datos t&eacute;cnicos necesarios para brindar el servicio,
+                de acuerdo con los t&eacute;rminos y pol&iacute;ticas de privacidad de esos proveedores.
+              </p>
+            </article>
+
+            <article class="policy-card">
+              <h3>7) Procesamiento internacional</h3>
+              <p>
+                La infraestructura del servicio puede procesar datos t&eacute;cnicos en pa&iacute;ses distintos del tuyo,
+                incluidos los Estados Unidos.
+              </p>
+            </article>
+
+            <article class="policy-card wide">
+              <h3>8) Tus derechos</h3>
+              <p>
+                Dependiendo de tu jurisdicci&oacute;n, puedes tener derechos de privacidad.
+                Puedes contactarnos en
+                <a href="mailto:isaac211.md@proton.me">isaac211.md@proton.me</a>
+                para enviar una solicitud.
+              </p>
+              <p>
+                Como Ley&eacute;ndolo no mantiene cuentas de usuario ni registros identificables de usuarios,
+                en muchos casos no podremos vincular solicitudes con una persona espec&iacute;fica.
+              </p>
+            </article>
+
+            <article class="policy-card">
+              <h3>9) Privacidad de menores</h3>
+              <p>Ley&eacute;ndolo no est&aacute; dirigida a menores de 13 a&ntilde;os.</p>
+            </article>
+
+            <article class="policy-card wide">
+              <h3>10) Cambios en esta Pol&iacute;tica de Privacidad</h3>
+              <p>
+                Podemos actualizar esta Pol&iacute;tica de Privacidad ocasionalmente.
+                Cuando lo hagamos, publicaremos la versi&oacute;n actualizada en la app y modificaremos la fecha de
+                "&Uacute;ltima actualizaci&oacute;n".
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="lang-block" data-lang-content="en" lang="en" hidden aria-label="Leyendolo privacy policy in English">
+          <div class="card-grid">
+            <article class="policy-card wide">
+              <h3>1) Introduction</h3>
+              <p>
+                This Privacy Policy explains how Leyendolo handles data.
+                Leyendolo is operated by an independent developer: Isaac Diaz.
+                The app is designed with a minimal-data approach and does not collect or store personal data from end users.
+              </p>
+            </article>
+
+            <article class="policy-card">
+              <h3>2) Data We Collect</h3>
+              <p>We do not collect or store personal data from end users.</p>
+              <ul>
+                <li>Leyendolo does not use user accounts, does not maintain user profiles, and does not keep a user database.</li>
+                <li>We do not retain the content users submit in prompts, text inputs, or uploaded material.</li>
+              </ul>
+            </article>
+
+            <article class="policy-card">
+              <h3>3) Limited Technical Metadata</h3>
+              <p>For service operation and cost control, the backend stores limited request metadata for OpenRouter calls:</p>
+              <ul>
+                <li>date and time of the request</li>
+                <li>model used</li>
+                <li>token usage</li>
+              </ul>
+              <p>This metadata does not include user content and is not used to identify individual users.</p>
+            </article>
+
+            <article class="policy-card">
+              <h3>4) Infrastructure Logs and Retention</h3>
+              <p>
+                The backend runs on Vercel Hobby. Platform logs are transient and available only for a limited
+                technical window (up to approximately 30 minutes).
+                We do not keep separate copies of those logs and we do not use them to identify users.
+              </p>
+            </article>
+
+            <article class="policy-card">
+              <h3>5) How We Use Technical Metadata</h3>
+              <p>The limited metadata described above is used only to:</p>
+              <ul>
+                <li>keep the service running</li>
+                <li>monitor usage and costs</li>
+                <li>diagnose operational issues</li>
+              </ul>
+            </article>
+
+            <article class="policy-card wide">
+              <h3>6) Sharing and Third Parties</h3>
+              <p>
+                We do not sell personal data.
+                To provide the service, we rely on third-party providers such as Vercel (hosting) and OpenRouter (AI gateway).
+                Only the minimum technical data required for service delivery is processed by those providers under
+                their own terms and privacy policies.
+              </p>
+            </article>
+
+            <article class="policy-card">
+              <h3>7) International Processing</h3>
+              <p>
+                Service infrastructure may process technical data in countries other than your own,
+                including the United States.
+              </p>
+            </article>
+
+            <article class="policy-card wide">
+              <h3>8) Your Rights</h3>
+              <p>
+                Depending on your jurisdiction, you may have privacy rights.
+                You can contact us at
+                <a href="mailto:isaac211.md@proton.me">isaac211.md@proton.me</a>
+                to submit a request.
+              </p>
+              <p>
+                Because Leyendolo does not maintain user accounts or identifiable user records,
+                we may not be able to link requests to a specific person in many cases.
+              </p>
+            </article>
+
+            <article class="policy-card">
+              <h3>9) Children's Privacy</h3>
+              <p>Leyendolo is not directed to children under 13.</p>
+            </article>
+
+            <article class="policy-card wide">
+              <h3>10) Changes to This Privacy Policy</h3>
+              <p>
+                We may update this Privacy Policy from time to time.
+                When we do, we will publish the updated version in the app and revise the
+                "Last Updated" date.
+              </p>
+            </article>
+          </div>
+        </section>
+      </section>
     </main>
 
-    <p class="footer-note">Forge - Privacidad por defecto.</p>
+    <p class="footer-note">Forge y Ley&eacute;ndolo - Privacidad por defecto y enfoque de datos m&iacute;nimos.</p>
   </div>
+
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll("[data-lang-btn]");
+      var panels = document.querySelectorAll("[data-lang-content]");
+      var updatedEs = document.getElementById("leyendolo-updated-es");
+      var updatedEn = document.getElementById("leyendolo-updated-en");
+
+      function setLanguage(lang) {
+        buttons.forEach(function (button) {
+          var active = button.getAttribute("data-lang-btn") === lang;
+          button.classList.toggle("is-active", active);
+          button.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+
+        panels.forEach(function (panel) {
+          var active = panel.getAttribute("data-lang-content") === lang;
+          panel.classList.toggle("is-active", active);
+          panel.hidden = !active;
+        });
+
+        if (updatedEs && updatedEn) {
+          var spanishActive = lang === "es";
+          updatedEs.classList.toggle("is-hidden", !spanishActive);
+          updatedEn.classList.toggle("is-hidden", spanishActive);
+        }
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLanguage(button.getAttribute("data-lang-btn"));
+        });
+      });
+
+      setLanguage("es");
+    })();
+  </script>
 </body>
 </html>

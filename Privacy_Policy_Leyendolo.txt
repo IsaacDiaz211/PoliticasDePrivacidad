@@ -1,0 +1,58 @@
+Privacy Policy
+Leyendolo
+Last Updated: March 16, 2026
+
+1. Introduction
+This Privacy Policy explains how Leyendolo handles data.
+
+Leyendolo is operated by an independent developer: Isaac Diaz.
+The app is designed with a minimal-data approach and does not collect or store personal data from end users.
+
+2. Data We Collect
+We do not collect or store personal data from end users.
+
+Specifically, Leyendolo does not use user accounts, does not maintain user profiles, and does not keep a user database.
+We do not retain the content users submit in prompts, text inputs, or uploaded material.
+
+3. Limited Technical Metadata
+For service operation and cost control, the backend stores limited request metadata for OpenRouter calls:
+
+- date and time of the request
+- model used
+- token usage
+
+This metadata does not include user content and is not used to identify individual users.
+
+4. Infrastructure Logs and Retention
+The backend runs on Vercel Hobby.
+Platform logs are transient and available only for a limited technical window (up to approximately 30 minutes).
+We do not keep separate copies of those logs and we do not use them to identify users.
+
+5. How We Use Technical Metadata
+The limited metadata described above is used only to:
+
+- keep the service running
+- monitor usage and costs
+- diagnose operational issues
+
+6. Sharing and Third Parties
+We do not sell personal data.
+
+To provide the service, we rely on third-party providers such as Vercel (hosting) and OpenRouter (AI gateway).
+Only the minimum technical data required for service delivery is processed by those providers under their own terms and privacy policies.
+
+7. International Processing
+Service infrastructure may process technical data in countries other than your own, including the United States.
+
+8. Your Rights
+Depending on your jurisdiction, you may have privacy rights.
+You can contact us at isaac211.md@proton.md to submit a request.
+
+Because Leyendolo does not maintain user accounts or identifiable user records, we may not be able to link requests to a specific person in many cases.
+
+9. Children's Privacy
+Leyendolo is not directed to children under 13.
+
+10. Changes to This Privacy Policy
+We may update this Privacy Policy from time to time.
+When we do, we will publish the updated version in the app and revise the "Last Updated" date.
