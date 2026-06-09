@@ -1,32 +1,91 @@
 Política de Privacidad - Forge
-Última actualización: 12 de febrero de 2026
+Última actualización: 9 de junio de 2026
 
 En Forge, valoramos tu privacidad por encima de todo. Esta política explica cómo manejamos la información (o mejor dicho, cómo no lo hacemos) y por qué solicitamos ciertos permisos en tu dispositivo.
 
-1. Recolección de Información
-[Nombre de tu App] es una aplicación diseñada bajo el principio de "Privacidad por Defecto".
+## 1. Recolección de Información
 
-No recolectamos: No solicitamos, almacenamos ni procesamos ningún tipo de dato personal (como nombres, correos electrónicos, direcciones IP o ubicación).
+Forge es una aplicación diseñada bajo el principio de **"Privacidad por Defecto"**.
 
-No rastreamos: La aplicación no utiliza cookies ni herramientas de análisis de terceros para rastrear tu comportamiento.
+### Datos que NO recolectamos:
+- Correos electrónicos
+- Nombres reales
+- Direcciones IP
+- Ubicación
+- Datos de uso o análisis
+- Cookies o identificadores publicitarios
 
-2. Uso de Permisos: Notificaciones
-El único permiso que solicita la aplicación es el de Notificaciones.
+### Datos que SÍ recolectamos (solo si aceptas usar la función de amigos):
+Si decides activar la función de amigos, se recopilará únicamente:
+- **UID anónimo**: Un identificador único que no está vinculado a tu identidad real
+- **Nombre de usuario**: Un apodo que tú elijas
+- **Avatar**: Una imagen entre las preestablecidas
+- **Historial de entrenamiento**: Tus rutinas y progreso en el gimnasio
+- **Estadísticas**: Resumen de tu actividad física
 
-Propósito: Este permiso se utiliza exclusivamente para que el temporizador pueda alertarte cuando el tiempo haya transcurrido.
+**Importante**: Esta información SOLO se recopila si aceptas explícitamente al ingresar a la vista de amigos. Si no aceptas, no se recopila ningún dato y la función de amigos permanece desactivada.
 
-Control del usuario: Puedes activar o desactivar este permiso en cualquier momento desde los ajustes de tu sistema operativo. Sin este permiso, la aplicación funcionará, pero no podrá avisarte una vez que salgas de la pantalla principal o bloquees el dispositivo.
+## 2. Uso de Permisos
 
-3. Almacenamiento de Datos
-Cualquier configuración que realices dentro de la aplicación (como tiempos predefinidos o preferencias de sonido) se almacena de forma local en tu dispositivo. No tenemos servidores centrales donde se guarde esta información.
+La aplicación solicita los siguientes permisos:
 
-4. Servicios de Terceros
-Nuestra aplicación no integra servicios de terceros, redes publicitarias ni SDKs de recolección de datos que puedan comprometer tu anonimato.
+### Notificaciones
+- **Propósito**: Para que el temporizador pueda alertarte cuando el tiempo haya transcurrido
+- **Control**: Puedes activar o desactivar este permiso desde los ajustes de tu sistema operativo
 
-5. Cambios en esta Política
-Es posible que actualicemos esta política en el futuro si añadimos nuevas funcionalidades. Sin embargo, nuestro compromiso de no recolectar datos personales se mantendrá como pilar fundamental del desarrollo.
+### Internet
+- **Propósito**: Necesario para la función de amigos (solo si la activas)
+- **Control**: Si no usas la función de amigos, este permiso no se utiliza activamente
 
-6. Contacto
+## 3. Almacenamiento de Datos
+
+### Datos locales
+Cualquier configuración que realices dentro de la aplicación (como tiempos predefinidos o preferencias de sonido) se almacena de forma local en tu dispositivo.
+
+### Datos en la nube (solo si aceptas la función de amigos)
+Si aceptas usar la función de amigos, los datos de tu perfil (nombre de usuario, avatar, historial y estadísticas) se almacenan en servidores de Firebase para que puedas:
+- Conectarte con otros usuarios
+- Mantener tu progreso sincronizado entre dispositivos
+- Ver estadísticas de tus amigos
+
+**Firebase se utiliza exclusivamente como servidor de almacenamiento. No se utilizan sus servicios de análisis, publicidad o rastreo.**
+
+## 4. Servicios de Terceros
+
+### Firebase (Google)
+- **Uso**: Servidor de almacenamiento para datos sociales (solo si activas la función de amigos)
+- **Datos almacenados**: UID anónimo, nombre de usuario, avatar, historial y estadísticas
+- **Política de privacidad**: [https://policies.google.com/privacy](https://policies.google.com/privacy)
+
+**No utilizamos**:
+- Google Analytics
+- Firebase Analytics
+- Ningún otro servicio de análisis o publicidad
+
+## 5. Compartir Datos entre Usuarios
+
+### Función de amigos
+Cuando aceptas usar la función de amigos y te conectas con otros usuarios, ellos podrán ver:
+- Tu nombre de usuario
+- Tu avatar
+- Tu historial de entrenamiento
+- Tus estadísticas de progreso
+
+### Control sobre tus datos
+- Puedes dejar de usar la función de amigos en cualquier momento. Puedes eliminar tu perfil y todos tus datos se eliminaron del servidor, no de tu almacenamiento local.
+- Cada usuario debe aceptar explícitamente compartir su información al activar la función
+
+## 6. Eliminación de Cuenta
+
+> La opción de eliminar tu perfil y todos tus datos asociados cuando lo decidas está disponible. No se alterará tu información local.
+
+## 7. Cambios en esta Política
+
+Es posible que actualicemos esta política en el futuro si añadimos nuevas funcionalidades. Sin embargo, nuestro compromiso de no recolectar datos personales innecesarios se mantendrá como pilar fundamental del desarrollo.
+
+## 8. Contacto
+
 Si tienes alguna duda sobre esta política o el funcionamiento de la app, puedes contactarnos en:
 
-isaac211.md@proton.me
+**isaac211.md@proton.me**
+
