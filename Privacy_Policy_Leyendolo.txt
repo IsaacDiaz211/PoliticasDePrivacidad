@@ -28,31 +28,37 @@ The backend runs on Vercel Hobby.
 Platform logs are transient and available only for a limited technical window (up to approximately 30 minutes).
 We do not keep separate copies of those logs and we do not use them to identify users.
 
-5. How We Use Technical Metadata
+5. Local Backend (Self-Host) as a Cloud Alternative
+By default, Leyendolo uses the cloud backend described in points 3, 4 and 6, with only minimal technical metadata (date/time, model, tokens).
+As an alternative, you can run your own local backend using the OrgBackend project as a template.
+
+Learn more by visiting the OrgBackend repository: https://github.com/IsaacDiaz211/OrgBackend
+
+6. How We Use Technical Metadata
 The limited metadata described above is used only to:
 
 - keep the service running
 - monitor usage and costs
 - diagnose operational issues
 
-6. Sharing and Third Parties
+7. Sharing and Third Parties
 We do not sell personal data.
 
 To provide the service, we rely on third-party providers such as Vercel (hosting) and OpenRouter (AI gateway).
 Only the minimum technical data required for service delivery is processed by those providers under their own terms and privacy policies.
 
-7. International Processing
+8. International Processing
 Service infrastructure may process technical data in countries other than your own, including the United States.
 
-8. Your Rights
+9. Your Rights
 Depending on your jurisdiction, you may have privacy rights.
 You can contact us at isaac211.md@proton.md to submit a request.
 
 Because Leyendolo does not maintain user accounts or identifiable user records, we may not be able to link requests to a specific person in many cases.
 
-9. Children's Privacy
+10. Children's Privacy
 Leyendolo is not directed to children under 13.
 
-10. Changes to This Privacy Policy
+11. Changes to This Privacy Policy
 We may update this Privacy Policy from time to time.
 When we do, we will publish the updated version in the app and revise the "Last Updated" date.

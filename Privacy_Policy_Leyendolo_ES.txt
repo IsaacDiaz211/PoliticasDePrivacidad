@@ -28,31 +28,37 @@ El backend corre en Vercel Hobby.
 Los logs de la plataforma son transitorios y estan disponibles solo durante una ventana tecnica limitada (hasta aproximadamente 30 minutos).
 No guardamos copias separadas de esos logs ni los usamos para identificar usuarios.
 
-5. Como usamos los metadatos tecnicos
+5. Backend local (self-host) como alternativa a la nube
+Por defecto, Leyendolo usa el backend en la nube descrito en los puntos 3, 4 y 6, con solo metadatos tecnicos minimos (fecha/hora, modelo, tokens).
+Como alternativa, puedes ejecutar tu propio backend local utilizando el proyecto OrgBackend como plantilla.
+
+Conoce mas visitando el repositorio de OrgBackend: https://github.com/IsaacDiaz211/OrgBackend
+
+6. Como usamos los metadatos tecnicos
 Los metadatos limitados descritos arriba se usan solo para:
 
 - mantener el servicio en funcionamiento
 - monitorear uso y costos
 - diagnosticar problemas operativos
 
-6. Comparticion y terceros
+7. Comparticion y terceros
 No vendemos datos personales.
 
 Para prestar el servicio, dependemos de proveedores terceros como Vercel (hosting) y OpenRouter (pasarela de IA).
 Solo se procesa el minimo de datos tecnicos necesarios para brindar el servicio, de acuerdo con los terminos y politicas de privacidad de esos proveedores.
 
-7. Procesamiento internacional
+8. Procesamiento internacional
 La infraestructura del servicio puede procesar datos tecnicos en paises distintos del tuyo, incluidos los Estados Unidos.
 
-8. Tus derechos
+9. Tus derechos
 Dependiendo de tu jurisdiccion, puedes tener derechos de privacidad.
 Puedes contactarnos en isaac211.md@proton.md para enviar una solicitud.
 
 Como Leyendolo no mantiene cuentas de usuario ni registros identificables de usuarios, en muchos casos no podremos vincular solicitudes con una persona especifica.
 
-9. Privacidad de menores
+10. Privacidad de menores
 Leyendolo no esta dirigida a menores de 13 anos.
 
-10. Cambios en esta Politica de Privacidad
+11. Cambios en esta Politica de Privacidad
 Podemos actualizar esta Politica de Privacidad ocasionalmente.
 Cuando lo hagamos, publicaremos la version actualizada en la app y modificaremos la fecha de "Ultima actualizacion".

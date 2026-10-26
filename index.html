@@ -163,6 +163,10 @@
       scroll-margin-top: 96px;
     }
 
+    .policy-card[id] {
+      scroll-margin-top: 96px;
+    }
+
     .panel-head {
       display: flex;
       flex-wrap: wrap;
@@ -543,8 +547,21 @@
               </p>
             </article>
 
+            <article class="policy-card wide" id="backend-local">
+              <h3>5) Backend local (self-host) como alternativa a la nube</h3>
+              <p>
+                Por defecto, Ley&eacute;ndolo usa el backend en la nube descrito en los puntos 3, 4 y 6,
+                con solo metadatos t&eacute;cnicos
+                m&iacute;nimos (fecha/hora, modelo, tokens). Como alternativa, puedes ejecutar tu propio
+                backend local utilizando el proyecto OrgBackend como plantilla.
+              </p>
+              <p>
+                Conoce más visitando el repositorio de <a href="https://github.com/IsaacDiaz211/OrgBackend" target="_blank" rel="noopener noreferrer">OrgBackend</a>.
+              </p>
+            </article>
+
             <article class="policy-card">
-              <h3>5) C&oacute;mo usamos los metadatos t&eacute;cnicos</h3>
+              <h3>6) C&oacute;mo usamos los metadatos t&eacute;cnicos</h3>
               <p>Los metadatos limitados descritos arriba se usan solo para:</p>
               <ul>
                 <li>mantener el servicio en funcionamiento</li>
@@ -554,7 +571,7 @@
             </article>
 
             <article class="policy-card wide">
-              <h3>6) Compartici&oacute;n y terceros</h3>
+              <h3>7) Compartici&oacute;n y terceros</h3>
               <p>
                 No vendemos datos personales.
                 Para prestar el servicio, dependemos de proveedores terceros como Vercel (hosting) y OpenRouter (pasarela de IA).
@@ -564,7 +581,7 @@
             </article>
 
             <article class="policy-card">
-              <h3>7) Procesamiento internacional</h3>
+              <h3>8) Procesamiento internacional</h3>
               <p>
                 La infraestructura del servicio puede procesar datos t&eacute;cnicos en pa&iacute;ses distintos del tuyo,
                 incluidos los Estados Unidos.
@@ -572,7 +589,7 @@
             </article>
 
             <article class="policy-card wide">
-              <h3>8) Tus derechos</h3>
+              <h3>9) Tus derechos</h3>
               <p>
                 Dependiendo de tu jurisdicci&oacute;n, puedes tener derechos de privacidad.
                 Puedes contactarnos en
@@ -586,12 +603,12 @@
             </article>
 
             <article class="policy-card">
-              <h3>9) Privacidad de menores</h3>
+              <h3>10) Privacidad de menores</h3>
               <p>Ley&eacute;ndolo no est&aacute; dirigida a menores de 13 a&ntilde;os.</p>
             </article>
 
             <article class="policy-card wide">
-              <h3>10) Cambios en esta Pol&iacute;tica de Privacidad</h3>
+              <h3>11) Cambios en esta Pol&iacute;tica de Privacidad</h3>
               <p>
                 Podemos actualizar esta Pol&iacute;tica de Privacidad ocasionalmente.
                 Cuando lo hagamos, publicaremos la versi&oacute;n actualizada en la app y modificaremos la fecha de
@@ -641,8 +658,21 @@
               </p>
             </article>
 
+            <article class="policy-card wide" id="backend-local-en">
+              <h3>5) Local Backend (Self-Host) as a Cloud Alternative</h3>
+              <p>
+                By default, Leyendolo uses the cloud backend described in points 3, 4 and 6,
+                with only minimal technical metadata
+                (date/time, model, tokens). As an alternative, you can run your own
+                local backend using the OrgBackend project as a template.
+              </p>
+              <p>
+                Learn more by visiting the <a href="https://github.com/IsaacDiaz211/OrgBackend" target="_blank" rel="noopener noreferrer">OrgBackend</a> repository.
+              </p>
+            </article>
+
             <article class="policy-card">
-              <h3>5) How We Use Technical Metadata</h3>
+              <h3>6) How We Use Technical Metadata</h3>
               <p>The limited metadata described above is used only to:</p>
               <ul>
                 <li>keep the service running</li>
@@ -652,7 +682,7 @@
             </article>
 
             <article class="policy-card wide">
-              <h3>6) Sharing and Third Parties</h3>
+              <h3>7) Sharing and Third Parties</h3>
               <p>
                 We do not sell personal data.
                 To provide the service, we rely on third-party providers such as Vercel (hosting) and OpenRouter (AI gateway).
@@ -662,7 +692,7 @@
             </article>
 
             <article class="policy-card">
-              <h3>7) International Processing</h3>
+              <h3>8) International Processing</h3>
               <p>
                 Service infrastructure may process technical data in countries other than your own,
                 including the United States.
@@ -670,7 +700,7 @@
             </article>
 
             <article class="policy-card wide">
-              <h3>8) Your Rights</h3>
+              <h3>9) Your Rights</h3>
               <p>
                 Depending on your jurisdiction, you may have privacy rights.
                 You can contact us at
@@ -684,12 +714,12 @@
             </article>
 
             <article class="policy-card">
-              <h3>9) Children's Privacy</h3>
+              <h3>10) Children's Privacy</h3>
               <p>Leyendolo is not directed to children under 13.</p>
             </article>
 
             <article class="policy-card wide">
-              <h3>10) Changes to This Privacy Policy</h3>
+              <h3>11) Changes to This Privacy Policy</h3>
               <p>
                 We may update this Privacy Policy from time to time.
                 When we do, we will publish the updated version in the app and revise the
@@ -737,7 +767,11 @@
         });
       });
 
-      setLanguage("es");
+      if (window.location.hash === "#backend-local-en") {
+        setLanguage("en");
+      } else {
+        setLanguage("es");
+      }
     })();
   </script>
 </body>
